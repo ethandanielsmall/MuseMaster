@@ -1,4 +1,4 @@
-# quotegenius
+# Muse Master
 
 ## User Story
 ### GIVEN I visit the webpage
