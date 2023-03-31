@@ -6,7 +6,7 @@ function callbackFunction(data) {
 }
 
 // Define a function to fetch data from the Forismatic API using JSONP
-function fetchData() {
+function fetchInspiration() {
     // Construct the URL for the API request with query parameters
     // The 'jsonp' parameter is set to the name of the callback function (callbackFunction)
     const url = "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=callbackFunction";
@@ -23,7 +23,7 @@ function fetchData() {
 }
 
 // Find the button element with the ID 'fetchButton' and store it in the variable 'fetchButton'
-const fetchButton = document.getElementById('fetchButton');
+const fetchInspirationButton = document.getElementById('fetchInspiration');
 
 // Add a click event listener to the 'fetchButton' that calls the 'fetchData' function when the button is clicked
-fetchButton.addEventListener('click', fetchData);
+fetchInspirationButton.addEventListener('click', fetchInspiration);
