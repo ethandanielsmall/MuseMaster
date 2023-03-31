@@ -1,6 +1,7 @@
-buttons{
-
-}
+.button-container-div{
+    text-align: center;
+    position: relative;
+    }
 
 button {
     position:relative;
