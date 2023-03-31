@@ -1,7 +1,11 @@
+buttons{
+
+}
+
 button {
     position:relative;
     padding: 12px 35px;
-    margin: 100px;
+    margin: 5%;
     background: #FEC195;
     font-size: 17px;
     font-weight: 500;
