@@ -1,4 +1,11 @@
-.button-container-div{
+*{
+  
+}
+#quote {
+  color: #FEC195;
+  text-align: center;
+}
+.button-container-div {
     text-align: center;
     }
 
