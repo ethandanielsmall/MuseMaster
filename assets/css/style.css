@@ -11,6 +11,18 @@ h1 {
   margin-bottom: 1px
 }
 
+/* TODO 
+- make the save button centered
+- make the text have some kind of box around each quote?
+- make the text in the box look nice
+- make the delete buttons smaller and make sense */
+
+#save-button {
+  font-size: 13px;
+  padding: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+}
 #quote {
   color: #724c9d;
   text-align: center;
