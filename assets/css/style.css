@@ -11,10 +11,18 @@ h1 {
   margin-bottom: 1px
 }
 
-/* TODO 
-- make the save button centered
-- make the text have some kind of box around each quote?
-- make the text in the box look nice */
+h2 {
+  color: #dccae9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  padding-left: 10%;
+  margin-top: 10%;
+  margin-bottom: 1px
+}
+
+.save-button-test {
+  text-align: center;
+}
 
 #save-button {
   font-size: 13px;
