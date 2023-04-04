@@ -23,6 +23,15 @@ h1 {
   padding-top: .5%;
   padding-bottom: .5%;
 }
+
+.delete {
+  color: white;
+  font-size: 13px;
+  padding: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+}
+
 #quote {
   color: #724c9d;
   text-align: center;
