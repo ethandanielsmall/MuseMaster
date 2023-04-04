@@ -106,18 +106,15 @@ function loadFavorites() {
     const quoteText = document.getElementById('quote').textContent;
     // Extract the text and author from the displayed quote
     const [text, author] = quoteText.split(' - ');
-    saveFavorite({ text, author });
+    
+    // If the author is "undefined" or an empty string, save only the text
+    if (author === 'undefined' || author === '') {
+      saveFavorite({ text });
+    } else {
+      // If the author exists, save both text and author
+      saveFavorite({ text, author });
+    }
   });
-
-  // Event listener for the Delete button
-  function deleteFavorite(selectedText) {
-    const favorites = loadFavorites();
-    // Filter out the selected favorite based on its text
-    const updatedFavorites = favorites.filter(favorite => favorite.text !== selectedText);
-    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    // Update the display of saved favorites
-    displayFavorites();
-  }
   
   // Initialize the display of saved favorites
   displayFavorites();
