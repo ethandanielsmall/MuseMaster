@@ -23,7 +23,7 @@ function callbackFunction(data) {
     document.getElementById('quote').textContent = data.quoteText + " - " + data.quoteAuthor;
 
     // Enable or disable the "Save" button based on the presence of the quote
-  document.getElementById('save-button').disabled = !data.quoteText;
+    document.getElementById('save-button').disabled = !data.quoteText;
 }
 
 // Find the button element with the ID 'fetchButton' and store it in the variable 'fetchButton'
@@ -47,7 +47,7 @@ function fetchAdvice() {
             document.getElementById('quote').textContent = data.slip.advice;
 
             // Enable or disable the "Save" button based on the presence of the advice
-      document.getElementById('save-button').disabled = !data.slip.advice;
+            document.getElementById('save-button').disabled = !data.slip.advice;
         })
         .catch(error => {
             console.error('Error fetching advice:', error);
@@ -64,49 +64,49 @@ fetchAdviceButton.addEventListener('click', fetchAdvice);
 function loadFavorites() {
     const savedFavorites = localStorage.getItem('favorites');
     return savedFavorites ? JSON.parse(savedFavorites) : [];
-  }
-  
-  //save a new favorite item to localStorage
-  function saveFavorite(item) {
+}
+
+//save a new favorite item to localStorage
+function saveFavorite(item) {
     const favorites = loadFavorites();
     // Check if the item is already in the favorites
     if (!favorites.some(favorite => favorite.text === item.text)) {
-      favorites.push(item);
-      localStorage.setItem('favorites', JSON.stringify(favorites));
-      // Optionally, update the display of saved favorites
-      displayFavorites();
+        favorites.push(item);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        // Optionally, update the display of saved favorites
+        displayFavorites();
     }
-  }
-  
-  //display saved favorites on the page
-  function displayFavorites() {
+}
+
+//display saved favorites on the page
+function displayFavorites() {
     const favorites = loadFavorites();
     const favoritesList = document.getElementById('favorites-list');
     favoritesList.innerHTML = '';
     for (const favorite of favorites) {
-      const listItem = document.createElement('li');
-      listItem.textContent = favorite.author ? `${favorite.text} - ${favorite.author}` : favorite.text;
-  
-      // Create the Delete button
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
-      deleteButton.addEventListener('click', () => {
-        deleteFavorite(favorite.text);
-      });
-  
-      // Append the Delete button to the list item
-      listItem.appendChild(deleteButton);
-  
-      favoritesList.appendChild(listItem);
+        const listItem = document.createElement('li');
+        listItem.textContent = favorite.author ? `${favorite.text} - ${favorite.author}` : favorite.text;
+
+        // Create the Delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', () => {
+            deleteFavorite(favorite.text);
+        });
+
+        // Append the Delete button to the list item
+        listItem.appendChild(deleteButton);
+
+        favoritesList.appendChild(listItem);
     }
-  }
-  
-  // Event listener for the Save button
-  document.getElementById('save-button').addEventListener('click', () => {
+}
+
+// Event listener for the Save button
+document.getElementById('save-button').addEventListener('click', () => {
     const quoteText = document.getElementById('quote').textContent;
     // Extract the text and author from the displayed quote
     const [text, author] = quoteText.split(' - ');
-    
+
     // If the author is "undefined" or an empty string, save only the text
     if (!author || author.trim() === '' || author === 'undefined') {
         saveFavorite({ text });
@@ -116,18 +116,17 @@ function loadFavorites() {
     }
 });
 
-  
 
-  // Event listener for the Delete button
-  function deleteFavorite(selectedText) {
+
+// Event listener for the Delete button
+function deleteFavorite(selectedText) {
     const favorites = loadFavorites();
     // Filter out the selected favorite based on its text
     const updatedFavorites = favorites.filter(favorite => favorite.text !== selectedText);
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     // Update the display of saved favorites
     displayFavorites();
-  }
-  
-  // Initialize the display of saved favorites
-  displayFavorites();
-  
+}
+
+// Initialize the display of saved favorites
+displayFavorites();
