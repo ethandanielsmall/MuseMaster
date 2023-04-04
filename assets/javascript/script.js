@@ -85,7 +85,7 @@ function loadFavorites() {
     favoritesList.innerHTML = '';
     for (const favorite of favorites) {
       const listItem = document.createElement('li');
-      listItem.textContent = favorite.text + ' - ' + favorite.author;
+      listItem.textContent = favorite.author ? `${favorite.text} - ${favorite.author}` : favorite.text;
   
       // Create the Delete button
       const deleteButton = document.createElement('button');
@@ -108,13 +108,14 @@ function loadFavorites() {
     const [text, author] = quoteText.split(' - ');
     
     // If the author is "undefined" or an empty string, save only the text
-    if (author === 'undefined' || author === '') {
-      saveFavorite({ text });
+    if (!author || author.trim() === '' || author === 'undefined') {
+        saveFavorite({ text });
     } else {
-      // If the author exists, save both text and author
-      saveFavorite({ text, author });
+        // If the author exists and is not an empty string, save both text and author
+        saveFavorite({ text, author });
     }
-  });
+});
+
   
 
   // Event listener for the Delete button
