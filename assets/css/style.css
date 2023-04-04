@@ -11,6 +11,50 @@ h1 {
   margin-bottom: 1px
 }
 
+h2 {
+  color: #dccae9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  padding-left: 10%;
+  margin-top: 10%;
+  margin-bottom: 1px
+}
+
+.save-button-test {
+  text-align: center;
+}
+
+#save-button {
+  font-size: 13px;
+  padding: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+}
+
+#favorites-list > li > button {
+  font-size: 13px;
+  padding: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+}
+
+#favorites-list {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+#favorites-list > li {
+  font-size: 20x;
+  color: #724c9d;
+  border-color:#2c1b47;
+  border-style: solid;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 3%;
+}
+
 #quote {
   color: #724c9d;
   text-align: center;
