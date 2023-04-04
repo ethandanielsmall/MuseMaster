@@ -18,7 +18,12 @@ function fetchInspiration() {
 function callbackFunction(data) {
     // Find the HTML element with the ID 'quote' and update its text content
     // to display the quote text and author received from the API response (data)
+    const quoteElement = document.getElementById('quote');
+
     document.getElementById('quote').textContent = data.quoteText + " - " + data.quoteAuthor;
+
+    // Enable or disable the "Save" button based on the presence of the quote
+  document.getElementById('save-button').disabled = !data.quoteText;
 }
 
 // Find the button element with the ID 'fetchButton' and store it in the variable 'fetchButton'
@@ -37,12 +42,20 @@ function fetchAdvice() {
         .then(response => response.json())
         .then(data => {
             //display the advice received from the API response (data)
+            const quoteElement = document.getElementById('quote');
+
             document.getElementById('quote').textContent = data.slip.advice;
+
+            // Enable or disable the "Save" button based on the presence of the advice
+      document.getElementById('save-button').disabled = !data.slip.advice;
         })
         .catch(error => {
             console.error('Error fetching advice:', error);
         });
 }
+
+// Initialize the "Save" button as disabled by default
+document.getElementById('save-button').disabled = true;
 
 const fetchAdviceButton = document.getElementById('fetchAdvice');
 fetchAdviceButton.addEventListener('click', fetchAdvice);
