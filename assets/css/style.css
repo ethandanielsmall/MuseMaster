@@ -31,7 +31,20 @@ h1 {
 }
 
 #favorites-list {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+#favorites-list > li {
+  font-size: 20x;
   color: white;
+  border-color:#2c1b47;
+  border-style: solid;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 3%;
 }
 
 #quote {
