@@ -14,8 +14,7 @@ h1 {
 /* TODO 
 - make the save button centered
 - make the text have some kind of box around each quote?
-- make the text in the box look nice
-- make the delete buttons smaller and make sense */
+- make the text in the box look nice */
 
 #save-button {
   font-size: 13px;
@@ -24,12 +23,15 @@ h1 {
   padding-bottom: .5%;
 }
 
-.delete {
-  color: white;
+#favorites-list > li > button {
   font-size: 13px;
   padding: 1%;
   padding-top: .5%;
   padding-bottom: .5%;
+}
+
+#favorites-list {
+  color: white;
 }
 
 #quote {
