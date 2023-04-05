@@ -77,6 +77,10 @@ button {
     transition: all .3s ease-in-out;
   }
   
+  button:focus {
+    background: #724c9d;
+  }
+
   .star-1 {
     position: absolute;
     top: 20%;
