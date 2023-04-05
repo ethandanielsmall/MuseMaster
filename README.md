@@ -11,6 +11,6 @@
 
 ### Credits
 
-https://uiverse.io/MuhammadHasann/silent-lizard-44
+Muhammad Hasan: https://uiverse.io/MuhammadHasann/silent-lizard-44
 
 Daniel Small, Chris Flores, Dylan Kazunaga
