@@ -45,11 +45,12 @@ h2 {
   font-size: 20x;
   color: #724c9d;
   border-color:#2c1b47;
-  border-style: solid;
-  padding-top: 5%;
+  border-style: none none none solid;
+  border-width: 10px;
+  padding-top: 2%;
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 3%;
+  margin: 3%;
 }
 
 #quote {
