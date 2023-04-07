@@ -1,9 +1,9 @@
 # Muse Master
 
 ## User Story
-### GIVEN I visit the webpage.
-### WHEN I click a button
-### THEN a random quote appears
+### As a user who wants to read various kinds of quotes,
+### I want to find and house quotes that I enjoy in one place,
+### So that I may view these beneficial quotes whenever I wish.
 
 ![rough sketch of website](https://github.com/ethandanielsmall/MuseMaster/blob/main/assets/images/MuseMaster.png?raw%3Dtrue)
 
