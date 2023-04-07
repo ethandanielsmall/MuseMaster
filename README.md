@@ -11,6 +11,8 @@
 
 ## Final look of the website
 
+![screenshot of website](https://github.com/ethandanielsmall/MuseMaster/blob/main/assets/images/MuseMasterScreenshot.png?raw%3Dtrue)
+
 ## Flowchart of the website's usage
 
 ![flowchart](https://github.com/ethandanielsmall/MuseMaster/blob/main/assets/images/flowchart.png?raw%3Dtrue)
