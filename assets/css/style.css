@@ -1,5 +1,8 @@
 body{
   background-color: #0b0205;
+  box-shadow: 0 0 0.625rem 0.3125rem #724c9d; 
+  margin: 4.25rem;
+  padding: 1.25rem;
 }
 
 h1 {
