@@ -25,9 +25,9 @@ h2 {
 
 #favorites-list > li > button {
   font-size: 13px;
-  padding: 1%;
-  padding-top: .5%;
-  padding-bottom: .5%;
+  padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 #favorites-list {
@@ -42,9 +42,9 @@ h2 {
   border-color:#2c1b47;
   border-style: none none none solid;
   border-width: 10px;
-  padding-top: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 5px;
   margin: 3%;
 }
 
@@ -62,7 +62,7 @@ h2 {
 button {
     position:relative;
     padding: 12px 35px;
-    margin: 5%;
+    margin: 20px;
     background: #724c9d;
     font-size: 17px;
     font-weight: 500;
